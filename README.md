@@ -7,7 +7,7 @@ Program that simulates the spread of a virus from a unique infected patient (pat
 - Infected people stay in the sick state for a constant period of time, then either die or become immune to the virus
 - No test, treatment or vaccine exist for this virus
 
-The following parameters are read on standard input:
+A locale name can be provided as an argument to the program to change the decimal symbol, otherwise the default locale is used. The following parameters are read on standard input:
 - Initial population
 - Infection rate
 - Contacts (per person and unit of time)
