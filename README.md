@@ -18,7 +18,7 @@ The following parameters are read on standard input:
 
 The unit of time is called a "round".
 
-At round 0, one person is in the incubating state. The remaining of the population is in the naive state (no one is sick or immune). At each round, the following calculations are done:
+At round 0, one person is in the incubating state. The remaining of the population is in the naive state (no one is sick, dead or immune). At each round, the following calculations are done:
 - Round standing = Total naive + Total incubating + Total immune
 - Round contacts = Total incubating * Contacts * Round standing / Initial population
 - If Round contacts > Round standing then Round contacts = Round standing
