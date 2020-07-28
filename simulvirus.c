@@ -61,14 +61,11 @@ int main(int argc, char *argv[]) {
 	printf("0\t\t\t\t\t");
 	print_state(0UL);
 	for (i = 1UL; i <= simulation_time; i++) {
-		double round_standing, raw_contacts, round_contacts, round_infected, round_dead, round_immune;
+		double round_standing, round_contacts, round_infected, round_dead, round_immune;
 		round_standing = naive+total_incubating+immune;
-		raw_contacts = total_incubating*contacts*round_standing/population;
-		if (raw_contacts > round_standing) {
+		round_contacts = total_incubating*contacts*round_standing/population;
+		if (round_contacts > round_standing) {
 			round_contacts = round_standing;
-		}
-		else {
-			round_contacts = raw_contacts;
 		}
 		round_infected = naive/round_standing*infection_rate*round_contacts;
 		round_dead = sick[sick_time-1UL]*death_rate;
